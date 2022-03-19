@@ -1,3 +1,7 @@
 # amiplant.js
 
-A JavaScript implementation of https://github.com/izzystardust/amiplant.
+A JavaScript implementation of [izzystardust/amiplant][amiplant].
+
+[amiplant]:https://github.com/izzystardust/amiplant
+
+<https://prplecake.github.io/amiplant.js/>
