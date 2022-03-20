@@ -2,96 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>amiplant.js</title>
-    <style>
-        html {
-            font-family: sans-serif;
-        }
-        body {
-            margin: 0 auto;
-            padding: 1rem 0.5rem;
-            text-align: center;
-        }
-        label {
-            display: inline-block;
-            width: 275px;
-        }
-        input {
-            min-width: 145px;
-            text-align: left;
-        }
-        #result-div > p {
-            font-size: larger;
-        }
-        #result-span {
-            font-size: larger;
-        }
-    </style>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>amiplant.js</title>
+		<style>
+				html {
+						font-family: sans-serif;
+				}
+				body {
+						margin: 0 auto;
+						padding: 1rem 0.5rem;
+						text-align: center;
+				}
+				label {
+						display: inline-block;
+						width: 275px;
+				}
+				input {
+						min-width: 145px;
+						text-align: left;
+				}
+				#result-div > p {
+						font-size: larger;
+				}
+				#result-span {
+						font-size: larger;
+				}
+		</style>
 </head>
 
 <body>
-    <h1>amiplant.js</h1>
+		<h1>amiplant.js</h1>
 
-    <div id="result-container">
+		<div id="result-container">
 
-        <div id="result-div" style="display:none;">
-            <p>You are <span id="result-span"></span> percent plant.</p>
-        </div>
-    </div>
+				<div id="result-div" style="display:none;">
+						<p>You are <span id="result-span"></span> percent plant.</p>
+				</div>
+		</div>
 
-    <div id="form-container">
-        <form method="post" action="#" id="sbmt">
-            <p>
-                <label class="label" for="weight">Weight <small>(in kg)</small>
-                    <input type="text" id="weight" required />
-                </label>
-            </p>
-            <p>
-                <label class="label">Height <small>(in cm)</small>
-                    <input type="text" id="height" required />
-                </label>
-            </p>
-            <p>
-                <label class="label">Veganniversary <small>(as YYYY-MM-DD)</small>
-                    <input type="text" id="veganniversary" placeholder="2006-12-01" required />
-                </label>
-            </p>
-            <p>
-                <label class="label">Gender
-                <label class="label" for="genderMale">
-                    <input type="radio" name="gender" id="genderMale" value="male" /> Male
-                </label>
-                <label class="label" for="genderFemale">
-                    <input type="radio" name="gender" id="genderFemale" value="female" /> Female
-                </label>
-                </label>
-            </p>
+		<div id="form-container">
+				<form method="post" action="#" id="sbmt">
+						<p>
+								<label class="label" for="weight">Weight <small>(in kg)</small>
+										<input type="text" id="weight" required />
+								</label>
+						</p>
+						<p>
+								<label class="label">Height <small>(in cm)</small>
+										<input type="text" id="height" required />
+								</label>
+						</p>
+						<p>
+								<label class="label">Veganniversary <small>(as YYYY-MM-DD)</small>
+										<input type="text" id="veganniversary" placeholder="2006-12-01" required />
+								</label>
+						</p>
+						<p>
+								<label class="label">Gender
+								<label class="label" for="genderMale">
+										<input type="radio" name="gender" id="genderMale" value="male" /> Male
+								</label>
+								<label class="label" for="genderFemale">
+										<input type="radio" name="gender" id="genderFemale" value="female" /> Female
+								</label>
+								</label>
+						</p>
 
-            <p>
-                <button class="button" type="submit" id="btn" name="btn">amiplant?</button>
+						<p>
+								<button class="button" type="submit" id="btn" name="btn">amiplant?</button>
 
-                <button class="button is-primary is-outlined" type="button" id="btn_clr" name="btn_clr">clear</button>
-            </p>
-        </form>
-    </div>
+								<button class="button is-primary is-outlined" type="button" id="btn_clr" name="btn_clr">clear</button>
+						</p>
+				</form>
+		</div>
 
-    <details>
-        <summary><strong>About This Site</strong></summary>
-        <p>
-            Inspired by
-            <a href="https://github.com/izzystardust/amiplant">
-                amiplant
-            </a>
-        </p>
-        <p>
-            <a href="https://github.com/prplecake/amiplant.js">
-                Source Code
-            </a>
-        </p>
-    </details>
-    <script src="amiplant.js"></script>
+		<details>
+				<summary><strong>About This Site</strong></summary>
+				<p>
+						Inspired by
+						<a href="https://github.com/izzystardust/amiplant">
+								amiplant
+						</a>
+				</p>
+				<p>
+						<a href="https://github.com/prplecake/amiplant.js">
+								Source Code
+						</a>
+				</p>
+		</details>
+		<script src="amiplant.js"></script>
 </body>
 
 </html>
