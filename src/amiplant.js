@@ -14,7 +14,7 @@ function getTotalHours(d) {
 }
 
 function percentPlantMass(c, p) {
-	percentReplaced = getTotalHours(p.wentVegan) / c.turnover;
+	let percentReplaced = getTotalHours(p.wentVegan) / c.turnover;
 	console.log("d: ", getTotalHours(p.wentVegan));
 	console.log("t: ", c.turnover);
 	console.log("percentReplaced: ", percentReplaced);
@@ -39,8 +39,9 @@ elem("sbmt").addEventListener("submit", function (event) {
 	// Prevent default form behavior
 	event.preventDefault();
 
-	data = new FormData(elem("sbmt"));
-	for (var entry of data) {
+	let data = new FormData(elem("sbmt"));
+	let gender;
+	for (let entry of data) {
 		gender = entry[1];
 	}
 
@@ -52,19 +53,19 @@ elem("sbmt").addEventListener("submit", function (event) {
 		gender
 	);
 
-	sum = 0.0;
+	let sum = 0.0;
 	bits.fat.percentMass = fatfn;
 	console.log(bits);
-	for (var [k, v] of Object.entries(bits)) {
+	for (let [k, v] of Object.entries(bits)) {
 		console.log("Calculating ", k);
 		sum += v.percentPlantMass(person);
 	}
-	elem('result-span').innerText = sum * 100;
+	elem('result-span').innerText = String(sum * 100);
 	elem('result-div').style.display = "revert";
 });
 
 // Form clear button pressed
-elem("btn_clr").addEventListener("click", function (event) {
+elem("btn_clr").addEventListener("click", function () {
 	// Clear values...
 	elem('weight').value = "";
 	elem('height').value = "";
@@ -72,9 +73,9 @@ elem("btn_clr").addEventListener("click", function (event) {
 });
 
 function fatfn(h, w, g) {
-	remaining = 1.0;
-	for (var [k, v] of Object.entries(bits)) {
-		if (k.indexOf("fat") == -1) {
+	let remaining = 1.0;
+	for (let [k, v] of Object.entries(bits)) {
+		if (k.indexOf("fat") === -1) {
 			remaining -= v.percentMass(h, w, g);
 		}
 	}
@@ -99,7 +100,8 @@ const bits = {
 	"lean": new component(
 		turnover = 5 * 365 * 24,
 		percentMass = function (w, h, g) {
-			if (g == "male") {
+			let a, b, c;
+			if (g === "male") {
 				a = 0.32810;
 				b = 0.33929;
 				c = 29.5336;
